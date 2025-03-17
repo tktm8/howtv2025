@@ -47,8 +47,8 @@ export default function UploadPage() {
         codeScore: data.code_quality.score,
         codeReason: data.code_quality.reason,
       });
-    } catch (err: any) {
-      setError(err.message);
+    } catch (err: unknown) {
+      setError(err instanceof Error ? err.message : "不明なエラーが発生しました");
     } finally {
       setLoading(false);
     }
