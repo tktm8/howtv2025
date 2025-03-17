@@ -21,19 +21,9 @@ export const skillOptions = [
   "Python",
   "Ruby",
   "TypeScript",
-
-  // モバイルアプリ
-  "Flutter",
-  "Swift",
-  "Kotlin",
-  "React Native",
 ];
 
-export const interestOptions = [
-  "フロントエンド",
-  "バックエンド",
-  "モバイルアプリ",
-];
+export const interestOptions = ["フロントエンド", "バックエンド"];
 
 export type User = {
   uid: number;
@@ -47,49 +37,49 @@ const users: User[] = [
   {
     uid: 1,
     name: "Bob",
-    skills: ["Vue", "Rails", "React", "Ruby", "TypeScript"],
+    skills: ["Django", "PHP", "Node.js", "Go", "TypeScript"],
     experience: 1,
-    interest: "モバイルアプリ",
+    interest: "フロントエンド",
   },
   {
     uid: 2,
     name: "Alice",
-    skills: ["Python", "Django", "Svelte", "PHP"],
-    experience: 5,
+    skills: ["Python", "Django", "Svelte", "Node.js", "Next.js"],
+    experience: 4,
     interest: "フロントエンド",
   },
   {
     uid: 3,
     name: "Mary",
-    skills: ["PHP", "Laravel", "Node.js", "Express", "Next.js"],
-    experience: 4,
-    interest: "フロントエンド",
+    skills: ["Vue", "Angular", "TypeScript", "React"],
+    experience: 0,
+    interest: "バックエンド",
   },
   {
     uid: 4,
     name: "Emma",
-    skills: ["Rails", "Node.js", "Express", "Go", "Ruby"],
-    experience: 3,
-    interest: "バックエンド",
+    skills: ["PHP", "Laravel", "Angular"],
+    experience: 2,
+    interest: "フロントエンド",
   },
   {
     uid: 5,
     name: "James",
-    skills: ["Next.js", "Angular", "TypeScript", "React"],
-    experience: 5,
+    skills: ["PHP", "Laravel", "Express", "Angular", "Next.js"],
+    experience: 2,
     interest: "バックエンド",
   },
   {
     uid: 6,
     name: "Rick",
-    skills: ["React Native", "JavaScript", "Svelte", "Swift", "Rails"],
+    skills: ["React", "JavaScript", "Vue", "TypeScript", "HTML"],
     experience: 3,
     interest: "フロントエンド",
   },
   {
     uid: 7,
     name: "Olivia",
-    skills: ["PHP", "Node.js", "Kotlin", "Django", "Go"],
+    skills: ["PHP", "Node.js", "Python", "Django", "Go"],
     experience: 0,
     interest: "バックエンド",
   },
@@ -103,37 +93,37 @@ const users: User[] = [
   {
     uid: 9,
     name: "Sophia",
-    skills: ["Swift", "React", "Next.js", "Ruby"],
+    skills: ["React", "Next.js", "Ruby", "Rails"],
     experience: 1,
     interest: "バックエンド",
   },
   {
     uid: 10,
     name: "Mason",
-    skills: ["React Native", "PHP", "Django", "JavaScript", "TypeScript"],
+    skills: ["PHP", "Django", "JavaScript", "TypeScript"],
     experience: 5,
-    interest: "モバイルアプリ",
+    interest: "バックエンド",
   },
   {
     uid: 11,
     name: "Isabella",
-    skills: ["Node.js", "Express", "Rails", "Vue", "Flutter"],
+    skills: ["Node.js", "Express", "Rails", "Vue"],
     experience: 4,
     interest: "フロントエンド",
   },
   {
     uid: 12,
     name: "Jacob",
-    skills: ["React", "Python", "Django", "Kotlin", "Angular"],
+    skills: ["React", "Python", "Django", "Angular"],
     experience: 3,
     interest: "バックエンド",
   },
   {
     uid: 13,
     name: "Mia",
-    skills: ["Go", "Swift", "React Native", "PHP"],
+    skills: ["Go", "PHP", "Django", "Vue", "Python"],
     experience: 2,
-    interest: "モバイルアプリ",
+    interest: "バックエンド",
   },
   {
     uid: 14,
@@ -145,7 +135,7 @@ const users: User[] = [
   {
     uid: 15,
     name: "Amelia",
-    skills: ["Laravel", "Svelte", "Express", "Flutter", "Python"],
+    skills: ["Laravel", "Svelte", "Express", "Python"],
     experience: 2,
     interest: "バックエンド",
   },
@@ -159,21 +149,21 @@ const users: User[] = [
   {
     uid: 17,
     name: "Charlotte",
-    skills: ["Django", "PHP", "Go", "Swift", "Next.js"],
+    skills: ["Django", "PHP", "Go", "Next.js"],
     experience: 0,
-    interest: "モバイルアプリ",
+    interest: "バックエンド",
   },
   {
     uid: 18,
     name: "Benjamin",
-    skills: ["React", "TypeScript", "Kotlin", "Rails", "Express"],
+    skills: ["React", "TypeScript", "Rails", "Express"],
     experience: 5,
     interest: "バックエンド",
   },
   {
     uid: 19,
     name: "Ava",
-    skills: ["Flutter", "Node.js", "Ruby", "React"],
+    skills: ["Node.js", "Ruby", "React", "Django"],
     experience: 4,
     interest: "フロントエンド",
   },
@@ -187,7 +177,7 @@ const users: User[] = [
   {
     uid: 21,
     name: "Emily",
-    skills: ["Laravel", "Swift", "Express", "CSS", "HTML"],
+    skills: ["Laravel", "Express", "CSS", "HTML"],
     experience: 2,
     interest: "フロントエンド",
   },
@@ -201,9 +191,9 @@ const users: User[] = [
   {
     uid: 23,
     name: "Harper",
-    skills: ["Kotlin", "Ruby", "Rails", "Flutter", "Vue"],
+    skills: ["Ruby", "Rails", "Vue"],
     experience: 1,
-    interest: "モバイルアプリ",
+    interest: "バックエンド",
   },
   {
     uid: 24,
@@ -215,9 +205,9 @@ const users: User[] = [
   {
     uid: 25,
     name: "Evelyn",
-    skills: ["React Native", "Kotlin", "Swift", "Flutter", "PHP"],
+    skills: ["React", "TypeScript", "JavaScript", "PHP"],
     experience: 4,
-    interest: "モバイルアプリ",
+    interest: "フロントエンド",
   },
 ];
 
