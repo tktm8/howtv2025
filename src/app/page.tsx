@@ -43,6 +43,26 @@ const competitions = [
     category: "セキュリティ",
     difficulty: "中級"
   },
+  {
+    id: 5,
+    title: "WEB開発イノベーションコンペ",
+    description: "最新のWeb技術を駆使した革新的なWebアプリケーションを開発するコンペティション",
+    deadline: "2025/5/10",
+    participants: 35,
+    maxParticipants: 70,
+    category: "WEB開発",
+    difficulty: "中級"
+  },
+  {
+    id: 6,
+    title: "モバイルアプリ開発チャレンジ",
+    description: "革新的なモバイルアプリのアイデアと実装を競うコンペティション",
+    deadline: "2025/5/20",
+    participants: 40,
+    maxParticipants: 80,
+    category: "モバイルアプリ",
+    difficulty: "上級"
+  }
 ];
 
 export default function Home() {
