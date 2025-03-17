@@ -20,17 +20,16 @@ export const skillOptions = [
   "PHP",
   "Python",
   "Ruby",
-  "TypeScript",
 ];
 
 export const interestOptions = ["フロントエンド", "バックエンド"];
 
 export type User = {
-  uid: number;
-  name: string;
-  skills: string[];
-  experience: number;
-  interest: string;
+  uid: number;// ユーザーID
+  name: string;// 名前
+  skills: string[];// スキル
+  experience: number;// コンペ参加回数
+  interest: string;// 興味・希望
 };
 
 const users: User[] = [
