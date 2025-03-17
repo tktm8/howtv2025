@@ -11,12 +11,11 @@ import {
   Tooltip,
   Legend,
 } from "chart.js";
+import { skillOptions, User, frontendUsers, backendUsers, findTop3Matches } from "./data";
+import MessagePopup from "./MessagePopup";
 
 // Chart.js のコンポーネントを登録
 ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
-
-// data.ts から各種データ・関数をインポート
-import { skillOptions, User, frontendUsers, backendUsers, findTop3Matches } from "./data";
 
 interface SimilarityChartProps {
   matches: { user: User; similarity: number }[];
@@ -63,6 +62,7 @@ export default function SkillMatcher() {
   const [selectedSkills, setSelectedSkills] = useState<string[]>([]);
   const [topFrontend, setTopFrontend] = useState<{ user: User; similarity: number }[]>([]);
   const [topBackend, setTopBackend] = useState<{ user: User; similarity: number }[]>([]);
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
 
   // スキル選択のトグル処理
   const toggleSkill = (skill: string) => {
@@ -153,8 +153,8 @@ export default function SkillMatcher() {
               <p>スキル: {renderSkills(match.user.skills)}</p>
               <p>類似度: {(match.similarity * 100).toFixed(1)}%</p>
               <button
-                className="bg-blue-500 text-white py-1 px-2 rounded mt-2"
-                onClick={() => {}}
+                className="bg-blue-500 hover:bg-blue-600 text-white py-1 px-2 rounded mt-2"
+                onClick={() => setIsPopupOpen(true)}
               >
                 気になる
               </button>
@@ -178,8 +178,8 @@ export default function SkillMatcher() {
               <p>スキル: {renderSkills(match.user.skills)}</p>
               <p>類似度: {(match.similarity * 100).toFixed(1)}%</p>
               <button
-                className="bg-blue-500 text-white py-1 px-2 rounded mt-2"
-                onClick={() => {}}
+                className="bg-blue-500 hover:bg-blue-600 text-white py-1 px-2 rounded mt-2"
+                onClick={() => setIsPopupOpen(true)}
               >
                 気になる
               </button>
@@ -192,6 +192,9 @@ export default function SkillMatcher() {
           )}
         </div>
       </div>
+
+      {/* ポップアップの表示 */}
+      {isPopupOpen && <MessagePopup onClose={() => setIsPopupOpen(false)} />}
     </div>
   );
 }
