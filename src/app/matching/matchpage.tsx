@@ -1,4 +1,3 @@
-// matchpage.tsx
 'use client';
 
 import React, { useState } from "react";
@@ -84,6 +83,11 @@ export default function SkillMatcher() {
     setTopBackend(findTop3Matches(dummyUser, backendUsers));
   };
 
+  // クリアボタンの処理：チェック状態をリセット
+  const handleClear = () => {
+    setSelectedSkills([]);
+  };
+
   // 候補者のスキルを表示（ユーザー選択スキルはハイライト）
   const renderSkills = (userSkills: string[]) => {
     return userSkills.map((skill, idx) => (
@@ -119,13 +123,22 @@ export default function SkillMatcher() {
         ))}
       </div>
 
-      <button
-        onClick={handleMatch}
-        disabled={selectedSkills.length === 0}
-        className="bg-blue-500 text-white py-2 px-4 rounded disabled:opacity-50 mb-8"
-      >
-        マッチング実行
-      </button>
+      {/* マッチング実行とクリアボタンを横並びに配置 */}
+      <div className="flex gap-4 mb-8">
+        <button
+          onClick={handleMatch}
+          disabled={selectedSkills.length === 0}
+          className="bg-blue-500 text-white py-2 px-4 rounded disabled:opacity-50"
+        >
+          マッチング実行
+        </button>
+        <button
+          onClick={handleClear}
+          className="bg-green-300 text-white py-2 px-4 rounded"
+        >
+          クリア
+        </button>
+      </div>
 
       {/* 横並びのコンテナ */}
       <div className="flex gap-8 w-full max-w-4xl">
@@ -139,6 +152,12 @@ export default function SkillMatcher() {
               </p>
               <p>スキル: {renderSkills(match.user.skills)}</p>
               <p>類似度: {(match.similarity * 100).toFixed(1)}%</p>
+              <button
+                className="bg-blue-500 text-white py-1 px-2 rounded mt-2"
+                onClick={() => {}}
+              >
+                気になる
+              </button>
             </div>
           ))}
           {topFrontend.length > 0 && (
@@ -158,6 +177,12 @@ export default function SkillMatcher() {
               </p>
               <p>スキル: {renderSkills(match.user.skills)}</p>
               <p>類似度: {(match.similarity * 100).toFixed(1)}%</p>
+              <button
+                className="bg-blue-500 text-white py-1 px-2 rounded mt-2"
+                onClick={() => {}}
+              >
+                気になる
+              </button>
             </div>
           ))}
           {topBackend.length > 0 && (
