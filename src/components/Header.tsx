@@ -10,7 +10,7 @@ const Header = () => {
               href="/"
               className="text-xl font-bold text-gray-900 mr-8"
             >
-              Howtv
+              Pont Stage
             </Link>
             <div className="flex space-x-8">
             <Link 
