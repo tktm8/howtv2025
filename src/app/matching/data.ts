@@ -41,30 +41,30 @@ export const frontendUsers: User[] = [
 
 // バックエンドユーザー（フロントエンド技術を一部保有）
 export const backendUsers: User[] = [
-  { uid: 1, name: "David1", skills: ["Django", "Node.js"], experience: 4 },
-  { uid: 2, name: "Sarah2", skills: ["Python", "Svelte", "Go"], experience: 2 },
-  { uid: 3, name: "Andrew3", skills: ["Ruby"], experience: 1 },
-  { uid: 4, name: "Madison4", skills: ["React", "Vue", "Next.js", "Express"], experience: 0 },
-  { uid: 5, name: "Joseph5", skills: ["JavaScript", "Go"], experience: 5 },
-  { uid: 6, name: "Abigail6", skills: ["PHP", "CSS", "TypeScript"], experience: 3 },
+  { uid: 21, name: "David1", skills: ["Django", "Node.js"], experience: 4 },
+  { uid: 22, name: "Sarah2", skills: ["Python", "Svelte", "Go"], experience: 2 },
+  { uid: 23, name: "Andrew3", skills: ["Ruby"], experience: 1 },
+  { uid: 24, name: "Madison4", skills: ["React", "Vue", "Next.js", "Express"], experience: 0 },
+  { uid: 25, name: "Joseph5", skills: ["JavaScript", "Go"], experience: 5 },
+  { uid: 26, name: "Abigail6", skills: ["PHP", "CSS", "TypeScript"], experience: 3 },
   // 【修正】Joshua7: もともと ["Next.js"] だったため、バックエンドスキル "Node.js" を追加
-  { uid: 7, name: "Joshua7", skills: ["Next.js", "Node.js"], experience: 2 },
-  { uid: 8, name: "Lily8", skills: ["Svelte", "HTML", "Express", "Python"], experience: 4 },
-  { uid: 9, name: "Christopher9", skills: ["Node.js", "Vue", "React"], experience: 1 },
-  { uid: 10, name: "Natalie10", skills: ["PHP"], experience: 2 },
+  { uid: 27, name: "Joshua7", skills: ["Next.js", "Node.js"], experience: 2 },
+  { uid: 28, name: "Lily8", skills: ["Svelte", "HTML", "Express", "Python"], experience: 4 },
+  { uid: 29, name: "Christopher9", skills: ["Node.js", "Vue", "React"], experience: 1 },
+  { uid: 30, name: "Natalie10", skills: ["PHP"], experience: 2 },
   // 【修正】Ryan11: もともと ["TypeScript", "HTML"] だったため、バックエンドスキル "Express" を追加
-  { uid: 11, name: "Ryan11", skills: ["TypeScript", "HTML", "Express"], experience: 0 },
-  { uid: 12, name: "Sophia12", skills: ["Express", "React", "Django", "PHP"], experience: 5 },
-  { uid: 13, name: "Ethan13", skills: ["Laravel", "Node.js", "JavaScript"], experience: 3 },
-  { uid: 14, name: "Grace14", skills: ["Python"], experience: 1 },
-  { uid: 15, name: "Daniel15", skills: ["CSS", "HTML", "PHP", "Node.js"], experience: 4 },
-  { uid: 16, name: "Victoria16", skills: ["React", "Ruby"], experience: 2 },
-  { uid: 17, name: "Matthew17", skills: ["Rails", "Go", "Django"], experience: 5 },
+  { uid: 31, name: "Ryan11", skills: ["TypeScript", "HTML", "Express"], experience: 0 },
+  { uid: 32, name: "Sophia12", skills: ["Express", "React", "Django", "PHP"], experience: 5 },
+  { uid: 33, name: "Ethan13", skills: ["Laravel", "Node.js", "JavaScript"], experience: 3 },
+  { uid: 34, name: "Grace14", skills: ["Python"], experience: 1 },
+  { uid: 35, name: "Daniel15", skills: ["CSS", "HTML", "PHP", "Node.js"], experience: 4 },
+  { uid: 36, name: "Victoria16", skills: ["React", "Ruby"], experience: 2 },
+  { uid: 37, name: "Matthew17", skills: ["Rails", "Go", "Django"], experience: 5 },
   // 【修正】Ella18: もともと ["Next.js"] だったため、バックエンドスキル "Django" を追加
-  { uid: 18, name: "Ella18", skills: ["Next.js", "Django"], experience: 3 },
+  { uid: 38, name: "Ella18", skills: ["Next.js", "Django"], experience: 3 },
   // 【修正】Luke19: もともと ["HTML", "JavaScript"] だったため、バックエンドスキル "PHP" を追加
-  { uid: 19, name: "Luke19", skills: ["HTML", "JavaScript", "PHP"], experience: 0 },
-  { uid: 20, name: "Jessica20", skills: ["Svelte", "Go", "TypeScript", "Vue"], experience: 1 },
+  { uid: 39, name: "Luke19", skills: ["HTML", "JavaScript", "PHP"], experience: 0 },
+  { uid: 40, name: "Jessica20", skills: ["Svelte", "Go", "TypeScript", "Vue"], experience: 1 },
 ];
 
 

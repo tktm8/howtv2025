@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from "react";
+import Link from "next/link";
 import { Bar } from "react-chartjs-2";
 import {
   Chart as ChartJS,
@@ -11,10 +12,15 @@ import {
   Tooltip,
   Legend,
 } from "chart.js";
-import { skillOptions, User, frontendUsers, backendUsers, findTop3Matches } from "./data";
+import {
+  skillOptions,
+  User,
+  frontendUsers,
+  backendUsers,
+  findTop3Matches,
+} from "./data";
 import MessagePopup from "./MessagePopup";
 
-// Chart.js のコンポーネントを登録
 ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
 
 interface SimilarityChartProps {
@@ -83,7 +89,7 @@ export default function SkillMatcher() {
     setTopBackend(findTop3Matches(dummyUser, backendUsers));
   };
 
-  // クリアボタンの処理：チェック状態をリセット
+  // クリアボタンの処理
   const handleClear = () => {
     setSelectedSkills([]);
   };
@@ -123,7 +129,7 @@ export default function SkillMatcher() {
         ))}
       </div>
 
-      {/* マッチング実行とクリアボタンを横並びに配置 */}
+      {/* マッチング実行とクリアボタン */}
       <div className="flex gap-4 mb-8">
         <button
           onClick={handleMatch}
@@ -152,12 +158,22 @@ export default function SkillMatcher() {
               </p>
               <p>スキル: {renderSkills(match.user.skills)}</p>
               <p>類似度: {(match.similarity * 100).toFixed(1)}%</p>
-              <button
-                className="bg-blue-500 hover:bg-blue-600 text-white py-1 px-2 rounded mt-2"
-                onClick={() => setIsPopupOpen(true)}
-              >
-                気になる
-              </button>
+
+              {/* ボタン2つを横並びに配置 */}
+              <div className="flex gap-2 mt-2">
+                <button
+                  className="bg-blue-500 hover:bg-blue-600 text-white py-1 px-2 rounded"
+                  onClick={() => setIsPopupOpen(true)}
+                >
+                  気になる
+                </button>
+                <Link
+                  href={`/user/${match.user.uid}`}
+                  className="bg-green-500 hover:bg-green-600 text-white py-1 px-2 rounded"
+                >
+                  詳細を見る
+                </Link>
+              </div>
             </div>
           ))}
           {topFrontend.length > 0 && (
@@ -177,12 +193,22 @@ export default function SkillMatcher() {
               </p>
               <p>スキル: {renderSkills(match.user.skills)}</p>
               <p>類似度: {(match.similarity * 100).toFixed(1)}%</p>
-              <button
-                className="bg-blue-500 hover:bg-blue-600 text-white py-1 px-2 rounded mt-2"
-                onClick={() => setIsPopupOpen(true)}
-              >
-                気になる
-              </button>
+
+              {/* ボタン2つを横並びに配置 */}
+              <div className="flex gap-2 mt-2">
+                <button
+                  className="bg-blue-500 hover:bg-blue-600 text-white py-1 px-2 rounded"
+                  onClick={() => setIsPopupOpen(true)}
+                >
+                  気になる
+                </button>
+                <Link
+                  href={`/user/${match.user.uid}`}
+                  className="bg-green-500 hover:bg-green-600 text-white py-1 px-2 rounded"
+                >
+                  詳細を見る
+                </Link>
+              </div>
             </div>
           ))}
           {topBackend.length > 0 && (

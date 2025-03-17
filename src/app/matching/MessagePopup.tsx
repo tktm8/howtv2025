@@ -13,7 +13,7 @@ const MessagePopup: React.FC<MessagePopupProps> = ({ onClose }) => {
 
   const handleSend = () => {
     // 送信処理などを挟んだ後、ページ遷移
-    router.push('/');
+    router.push('/talkroom');
   };
 
   return (
