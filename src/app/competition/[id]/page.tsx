@@ -197,13 +197,15 @@ const competitions = [
   },
 ];
 
-export default function CompetitionDetail({
-  params,
-}: {
-  params: { id: string };
-}) {
+interface Props {
+  params: Promise<{ id: string }>;
+  searchParams?: Promise<{ [key: string]: string | string[] | undefined }>;
+}
+
+export default async function CompetitionDetail({ params }: Props) {
   // IDに基づいてコンペ情報を取得
-  const competition = competitions.find((c) => c.id === parseInt(params.id));
+  const { id } = await params;
+  const competition = competitions.find((c) => c.id === parseInt(id));
 
   if (!competition) {
     return (
