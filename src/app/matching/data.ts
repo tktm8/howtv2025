@@ -1,8 +1,11 @@
-// スキルオプション
-export const skillOptions = [
-  "React", "Vue", "Angular", "Svelte", "Next.js", "JavaScript", "TypeScript", "CSS", "HTML",
-  "Node.js", "Express", "Rails", "Laravel", "Django", "Go", "PHP", "Python", "Ruby"
-];
+// スキルカテゴリー
+export const skillCategories = {
+  frontend: ["React", "Vue", "Angular", "Svelte", "Next.js", "JavaScript", "TypeScript", "CSS", "HTML"],
+  backend: ["Node.js", "Express", "Rails", "Laravel", "Django", "Go", "PHP", "Python", "Ruby"]
+};
+
+// 全スキルオプション
+export const skillOptions = [...skillCategories.frontend, ...skillCategories.backend];
 
 // ユーザー型定義
 export type User = {

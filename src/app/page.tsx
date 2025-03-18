@@ -67,44 +67,44 @@ const competitions = [
 
 export default function Home() {
   return (
-    <div className="min-h-screen p-8 font-[family-name:var(--font-geist-sans)]">
-      <h1 className="text-3xl font-bold mb-8 text-center">コンペティション一覧</h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div className="min-h-screen p-8 bg-white font-[family-name:var(--font-geist-sans)]">
+      <h1 className="text-3xl font-bold mb-8 text-[#114260] text-center">コンペティション一覧</h1>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {competitions.map((comp) => (
           <div
             key={comp.id}
-            className="bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden"
+            className="bg-white rounded-xl border-2 border-[#114260]/10 shadow-lg hover:shadow-xl hover:border-[#114260]/30 transition-all duration-300 overflow-hidden"
           >
             <div className="p-6">
               <div className="flex items-start justify-between">
                 <h2 className="text-xl font-semibold mb-2">{comp.title}</h2>
-                <span className="inline-flex items-center rounded-full bg-blue-100 dark:bg-blue-900 px-2.5 py-1 text-xs font-medium text-blue-800 dark:text-blue-100">
+                <span className="inline-flex items-center rounded-full bg-[#114260]/10 px-2.5 py-1 text-xs font-medium text-[#114260]">
                   {comp.category}
                 </span>
               </div>
-              <p className="text-gray-600 dark:text-gray-300 text-sm mb-4">
+              <p className="text-gray-600 text-sm mb-4 line-clamp-2">
                 {comp.description}
               </p>
               <div className="space-y-3">
-                <div className="flex items-center text-gray-500 dark:text-gray-400">
-                  <Calendar className="w-4 h-4 mr-2" />
+                <div className="flex items-center text-[#114260]">
+                  <Calendar className="w-4 h-4 mr-2 opacity-70" />
                   <span className="text-sm">締切: {comp.deadline}</span>
                 </div>
-                <div className="flex items-center text-gray-500 dark:text-gray-400">
-                  <Users className="w-4 h-4 mr-2" />
+                <div className="flex items-center text-[#114260]">
+                  <Users className="w-4 h-4 mr-2 opacity-70" />
                   <span className="text-sm">
                     参加者: {comp.participants}/{comp.maxParticipants}
                   </span>
                 </div>
-                <div className="flex items-center text-gray-500 dark:text-gray-400">
-                  <Trophy className="w-4 h-4 mr-2" />
+                <div className="flex items-center text-[#114260]">
+                  <Trophy className="w-4 h-4 mr-2 opacity-70" />
                   <span className="text-sm">難易度: {comp.difficulty}</span>
                 </div>
               </div>
               <div className="mt-6">
                 <Link
                   href={`/competition/${comp.id}`}
-                  className="block w-full bg-blue-600 text-white rounded-lg py-2 hover:bg-blue-700 transition-colors duration-200 text-center"
+                  className="block w-full bg-[#114260] text-white rounded-lg py-2.5 hover:bg-[#114260]/90 transition-all duration-300 text-center font-medium hover:shadow-md"
                 >
                   詳細を見る
                 </Link>
