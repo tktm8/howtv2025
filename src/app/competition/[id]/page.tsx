@@ -158,12 +158,12 @@ export default function CompetitionDetail({ params }: { params: { id: string } }
 
   if (!competition) {
     return (
-      <div className="min-h-screen p-8 flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-2xl font-bold mb-4">コンペティションが見つかりません</h1>
-          <Link 
-            href="/"
-            className="text-blue-600 hover:text-blue-800 transition-colors duration-200"
+    <div className="min-h-screen p-8 flex items-center justify-center bg-white">
+      <div className="text-center">
+        <h1 className="text-2xl font-bold mb-4 text-[#114260]">コンペティションが見つかりません</h1>
+        <Link 
+          href="/"
+          className="text-[#114260] hover:opacity-80 transition-colors duration-200"
           >
             トップページに戻る
           </Link>
@@ -173,52 +173,52 @@ export default function CompetitionDetail({ params }: { params: { id: string } }
   }
 
   return (
-    <div className="min-h-screen p-8 max-w-6xl mx-auto">
+    <div className="min-h-screen p-8 max-w-6xl mx-auto bg-white">
       <Link 
         href="/"
-        className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors duration-200 mb-6"
+        className="inline-flex items-center text-[#114260] hover:opacity-80 transition-colors duration-200 mb-6"
       >
         ← トップページに戻る
       </Link>
 
-      <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8">
+      <div className="bg-white rounded-xl shadow-lg p-8 border border-gray-100">
         <div className="flex items-start justify-between mb-6">
           <h1 className="text-3xl font-bold">{competition.title}</h1>
-          <span className="inline-flex items-center rounded-full bg-blue-100 dark:bg-blue-900 px-3 py-1 text-sm font-medium text-blue-800 dark:text-blue-100">
+          <span className="inline-flex items-center rounded-full bg-[#114260] px-3 py-1.5 text-sm font-medium text-white">
             {competition.category}
           </span>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-          <div className="flex items-center text-gray-600 dark:text-gray-300">
-            <Calendar className="w-5 h-5 mr-2" />
+          <div className="flex items-center text-[#114260]">
+            <Calendar className="w-5 h-5 mr-2 text-[#114260]" />
             <span>締切: {competition.deadline}</span>
           </div>
-          <div className="flex items-center text-gray-600 dark:text-gray-300">
-            <Users className="w-5 h-5 mr-2" />
+          <div className="flex items-center text-[#114260]">
+            <Users className="w-5 h-5 mr-2 text-[#114260]" />
             <span>参加者: {competition.participants}/{competition.maxParticipants}</span>
           </div>
-          <div className="flex items-center text-gray-600 dark:text-gray-300">
-            <Trophy className="w-5 h-5 mr-2" />
+          <div className="flex items-center text-[#114260]">
+            <Trophy className="w-5 h-5 mr-2 text-[#114260]" />
             <span>難易度: {competition.difficulty}</span>
           </div>
         </div>
 
-        <div className="prose dark:prose-invert max-w-none mb-8">
-          <h2 className="flex items-center text-xl font-semibold mb-4">
-            <Book className="w-5 h-5 mr-2" />
+        <div className="prose max-w-none mb-8">
+          <h2 className="flex items-center text-xl font-semibold mb-4 text-[#114260]">
+            <Book className="w-5 h-5 mr-2 text-[#114260]" />
             概要
           </h2>
-          <p className="whitespace-pre-line">{competition.longDescription}</p>
+          <p className="whitespace-pre-line text-[#114260] opacity-90">{competition.longDescription}</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
           <div>
-            <h2 className="flex items-center text-xl font-semibold mb-4">
-              <Timer className="w-5 h-5 mr-2" />
+            <h2 className="flex items-center text-xl font-semibold mb-4 text-[#114260]">
+              <Timer className="w-5 h-5 mr-2 text-[#114260]" />
               ルール
             </h2>
-            <ul className="list-disc list-inside space-y-2 text-gray-600 dark:text-gray-300">
+            <ul className="list-disc list-inside space-y-2 text-[#114260]">
               {competition.rules.map((rule, index) => (
                 <li key={index}>{rule}</li>
               ))}
@@ -226,11 +226,11 @@ export default function CompetitionDetail({ params }: { params: { id: string } }
           </div>
 
           <div>
-            <h2 className="flex items-center text-xl font-semibold mb-4">
-              <Award className="w-5 h-5 mr-2" />
+            <h2 className="flex items-center text-xl font-semibold mb-4 text-[#114260]">
+              <Award className="w-5 h-5 mr-2 text-[#114260]" />
               賞品
             </h2>
-            <ul className="list-disc list-inside space-y-2 text-gray-600 dark:text-gray-300">
+            <ul className="list-disc list-inside space-y-2 text-[#114260]">
               {competition.prizes.map((prize, index) => (
                 <li key={index}>{prize}</li>
               ))}
@@ -239,8 +239,8 @@ export default function CompetitionDetail({ params }: { params: { id: string } }
         </div>
 
         <div className="mb-8">
-          <h2 className="text-xl font-semibold mb-4">評価基準</h2>
-          <ul className="list-disc list-inside space-y-2 text-gray-600 dark:text-gray-300">
+          <h2 className="text-xl font-semibold mb-4 text-[#114260]">評価基準</h2>
+          <ul className="list-disc list-inside space-y-2 text-[#114260]">
             {competition.evaluationCriteria.map((criteria, index) => (
               <li key={index}>{criteria}</li>
             ))}
@@ -249,12 +249,12 @@ export default function CompetitionDetail({ params }: { params: { id: string } }
 
         <div className="flex justify-center space-x-4">
           <Link href="/matching">
-            <button className="bg-blue-600 text-white rounded-lg px-8 py-3 hover:bg-blue-700 transition-colors duration-200 font-medium">
+            <button className="bg-[#114260] text-white rounded-lg px-8 py-3 hover:opacity-90 transition-all duration-200 font-medium shadow-md">
               参加する
             </button>
           </Link>
           <Link href="/codescoring">
-            <button className="bg-blue-600 text-white rounded-lg px-8 py-3 hover:bg-blue-700 transition-colors duration-200 font-medium">
+            <button className="bg-[#114260] text-white rounded-lg px-8 py-3 hover:opacity-90 transition-all duration-200 font-medium shadow-md">
               提出する
             </button>
           </Link>
