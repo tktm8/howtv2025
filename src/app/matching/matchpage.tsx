@@ -1,5 +1,3 @@
-'use client';
-
 import React, { useState } from "react";
 import Link from "next/link";
 import {
@@ -44,7 +42,8 @@ export default function SkillMatcher() {
 
   return (
     <div className="min-h-screen flex flex-col items-center p-8 bg-white">
-      <h1 className="text-3xl font-bold mb-8 text-[#114260]">スキルマッチング</h1>
+      <h1 className="text-3xl font-bold mb-2 text-[#114260]">スキルマッチング</h1>
+      <p className="text-sm text-gray-600 mb-8">やりたいことを選択してください</p>
 
       {/* スキル選択エリア */}
       <div className="flex gap-8 max-w-4xl w-full mb-8">

@@ -1,12 +1,13 @@
-import { Calendar, Users, Trophy, Book, Award, Timer } from 'lucide-react';
-import Link from 'next/link';
+import { Calendar, Users, Trophy, Book, Award, Timer } from "lucide-react";
+import Link from "next/link";
 
 // 仮のコンペデータ（後でAPIなどから取得する）
 const competitions = [
   {
     id: 1,
     title: "WEBパフォーマンスチャレンジ 2025",
-    description: "効率的なWEBアルゴリズムとパフォーマンス最適化を競うコンペティション",
+    description:
+      "効率的なWEBアルゴリズムとパフォーマンス最適化を競うコンペティション",
     longDescription:
       "このコンペティションでは、参加者は最新のWEB技術を用いて、サーバーサイドおよびクライアントサイドで効率的なアルゴリズムを実装し、全体のパフォーマンスを最大化することを求められます。\n\n" +
       "主な課題：\n" +
@@ -23,19 +24,15 @@ const competitions = [
       "すべての提出は指定されたWEBフレームワークで実装すること",
       "外部ライブラリの使用は制限付き",
       "提出されたコードは自動テストにより評価",
-      "コードの可読性も評価対象"
+      "コードの可読性も評価対象",
     ],
-    prizes: [
-      "1位: 賞金30万円",
-      "2位: 賞金20万円",
-      "3位: 賞金10万円"
-    ],
+    prizes: ["1位: 賞金30万円", "2位: 賞金20万円", "3位: 賞金10万円"],
     evaluationCriteria: [
       "パフォーマンス（40%）",
       "リソース使用量（30%）",
       "コードの品質（20%）",
-      "ドキュメント（10%）"
-    ]
+      "ドキュメント（10%）",
+    ],
   },
   {
     id: 2,
@@ -57,24 +54,25 @@ const competitions = [
       "オリジナルのデザインであること",
       "指定されたモバイルデザインシステムに従うこと",
       "アクセシビリティガイドラインの遵守",
-      "プロトタイプの提出必須"
+      "プロトタイプの提出必須",
     ],
     prizes: [
       "1位: 最新デザインツール年間ライセンス",
       "2位: デザインワークショップ参加権",
-      "3位: デザイン書籍セット"
+      "3位: デザイン書籍セット",
     ],
     evaluationCriteria: [
       "デザインの革新性（30%）",
       "ユーザビリティ（30%）",
       "アクセシビリティ（20%）",
-      "技術的実現可能性（20%）"
-    ]
+      "技術的実現可能性（20%）",
+    ],
   },
   {
     id: 3,
     title: "WEB AI統合チャレンジ",
-    description: "最新のAI技術を活用したWEBアプリケーションの最適化に挑戦するコンペティション",
+    description:
+      "最新のAI技術を活用したWEBアプリケーションの最適化に挑戦するコンペティション",
     longDescription:
       "このコンペティションでは、参加者はWEBアプリケーションにAI技術を統合し、ユーザー体験や業務効率の向上を目指します。\n\n" +
       "主な課題：\n" +
@@ -91,24 +89,21 @@ const competitions = [
       "指定されたWEBフレームワークで実装すること",
       "AIモデル統合に関するガイドラインを遵守すること",
       "外部APIの使用は制限付き",
-      "自動テストにより評価"
+      "自動テストにより評価",
     ],
-    prizes: [
-      "1位: 賞金30万円",
-      "2位: 賞金20万円",
-      "3位: 賞金10万円"
-    ],
+    prizes: ["1位: 賞金30万円", "2位: 賞金20万円", "3位: 賞金10万円"],
     evaluationCriteria: [
       "AI統合効率（40%）",
       "パフォーマンス（30%）",
       "コードの品質（20%）",
-      "ドキュメント（10%）"
-    ]
+      "ドキュメント（10%）",
+    ],
   },
   {
     id: 4,
     title: "WEBセキュリティハッカソン",
-    description: "WEBアプリケーションの脆弱性を見つけて修正するコンペティション",
+    description:
+      "WEBアプリケーションの脆弱性を見つけて修正するコンペティション",
     longDescription:
       "このコンペティションでは、参加者は最新のWEBアプリケーションに対するセキュリティの脆弱性を検出し、効果的な修正策を提案します。\n\n" +
       "主な課題：\n" +
@@ -125,24 +120,21 @@ const competitions = [
       "オリジナルのコードで脆弱性を検出すること",
       "指定されたセキュリティガイドラインを遵守すること",
       "自動テストによる評価を受けること",
-      "修正提案も併せて提出すること"
+      "修正提案も併せて提出すること",
     ],
-    prizes: [
-      "1位: 賞金30万円",
-      "2位: 賞金20万円",
-      "3位: 賞金10万円"
-    ],
+    prizes: ["1位: 賞金30万円", "2位: 賞金20万円", "3位: 賞金10万円"],
     evaluationCriteria: [
       "セキュリティ堅牢性（40%）",
       "修正提案の有効性（30%）",
       "コードの品質（20%）",
-      "レポートの詳細度（10%）"
-    ]
+      "レポートの詳細度（10%）",
+    ],
   },
   {
     id: 5,
     title: "WEB開発イノベーションコンペ",
-    description: "最新のWeb技術を駆使した革新的なWebアプリケーションの開発を競うコンペティション",
+    description:
+      "最新のWeb技術を駆使した革新的なWebアプリケーションの開発を競うコンペティション",
     longDescription:
       "このコンペティションでは、参加者は最新のWeb技術を活用して、ユーザー体験に優れたWebアプリケーションを開発します。\n\n" +
       "主な課題：\n" +
@@ -159,19 +151,15 @@ const competitions = [
       "オリジナルのコードで開発すること",
       "最新のWebフレームワークを活用可能",
       "セキュリティガイドラインを遵守",
-      "パフォーマンス最適化を図ること"
+      "パフォーマンス最適化を図ること",
     ],
-    prizes: [
-      "1位: 賞金30万円",
-      "2位: 賞金20万円",
-      "3位: 賞金10万円"
-    ],
+    prizes: ["1位: 賞金30万円", "2位: 賞金20万円", "3位: 賞金10万円"],
     evaluationCriteria: [
       "ユーザー体験（40%）",
       "パフォーマンス（30%）",
       "デザイン（20%）",
-      "セキュリティ（10%）"
-    ]
+      "セキュリティ（10%）",
+    ],
   },
   {
     id: 6,
@@ -193,34 +181,40 @@ const competitions = [
       "オリジナルのアプリであること",
       "指定されたプラットフォームに準拠すること",
       "UIガイドラインの遵守",
-      "プロトタイプの提出必須"
+      "プロトタイプの提出必須",
     ],
     prizes: [
       "1位: 最新スマートフォン",
       "2位: タブレット",
-      "3位: アプリ開発ツールセット"
+      "3位: アプリ開発ツールセット",
     ],
     evaluationCriteria: [
       "UI/UX（35%）",
       "パフォーマンス（35%）",
       "技術的実現可能性（20%）",
-      "革新性（10%）"
-    ]
-  }
+      "革新性（10%）",
+    ],
+  },
 ];
 
-export default function CompetitionDetail({ params }: { params: { id: string } }) {
+export default function CompetitionDetail({
+  params,
+}: {
+  params: { id: string };
+}) {
   // IDに基づいてコンペ情報を取得
-  const competition = competitions.find(c => c.id === parseInt(params.id));
+  const competition = competitions.find((c) => c.id === parseInt(params.id));
 
   if (!competition) {
     return (
-    <div className="min-h-screen p-8 flex items-center justify-center bg-white">
-      <div className="text-center">
-        <h1 className="text-2xl font-bold mb-4 text-[#114260]">コンペティションが見つかりません</h1>
-        <Link 
-          href="/"
-          className="text-[#114260] hover:opacity-80 transition-colors duration-200"
+      <div className="min-h-screen p-8 flex items-center justify-center bg-white">
+        <div className="text-center">
+          <h1 className="text-2xl font-bold mb-4 text-[#114260]">
+            コンペティションが見つかりません
+          </h1>
+          <Link
+            href="/"
+            className="text-[#114260] hover:opacity-80 transition-colors duration-200"
           >
             トップページに戻る
           </Link>
@@ -231,7 +225,7 @@ export default function CompetitionDetail({ params }: { params: { id: string } }
 
   return (
     <div className="min-h-screen p-8 max-w-6xl mx-auto bg-white">
-      <Link 
+      <Link
         href="/"
         className="inline-flex items-center text-[#114260] hover:opacity-80 transition-colors duration-200 mb-6"
       >
@@ -253,7 +247,9 @@ export default function CompetitionDetail({ params }: { params: { id: string } }
           </div>
           <div className="flex items-center text-[#114260]">
             <Users className="w-5 h-5 mr-2 text-[#114260]" />
-            <span>参加者: {competition.participants}/{competition.maxParticipants}</span>
+            <span>
+              参加者: {competition.participants}/{competition.maxParticipants}
+            </span>
           </div>
           <div className="flex items-center text-[#114260]">
             <Trophy className="w-5 h-5 mr-2 text-[#114260]" />
@@ -266,7 +262,9 @@ export default function CompetitionDetail({ params }: { params: { id: string } }
             <Book className="w-5 h-5 mr-2 text-[#114260]" />
             概要
           </h2>
-          <p className="whitespace-pre-line text-[#114260] opacity-90">{competition.longDescription}</p>
+          <p className="whitespace-pre-line text-[#114260] opacity-90">
+            {competition.longDescription}
+          </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
@@ -296,7 +294,9 @@ export default function CompetitionDetail({ params }: { params: { id: string } }
         </div>
 
         <div className="mb-8">
-          <h2 className="text-xl font-semibold mb-4 text-[#114260]">評価基準</h2>
+          <h2 className="text-xl font-semibold mb-4 text-[#114260]">
+            評価基準
+          </h2>
           <ul className="list-disc list-inside space-y-2 text-[#114260]">
             {competition.evaluationCriteria.map((criteria, index) => (
               <li key={index}>{criteria}</li>
@@ -311,7 +311,7 @@ export default function CompetitionDetail({ params }: { params: { id: string } }
             </button>
           </Link>
           <Link href="/codescoring">
-            <button className="bg-[#114260] text-white rounded-lg px-8 py-3 hover:opacity-90 transition-all duration-200 font-medium shadow-md">
+            <button className="border-2 border-[#114260] text-[#114260] rounded-lg px-8 py-3 hover:bg-gray-50 transition-all duration-200 font-medium shadow-md">
               提出する
             </button>
           </Link>
