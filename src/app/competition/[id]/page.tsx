@@ -17,7 +17,7 @@ const competitions = [
     deadline: "2025/4/30",
     participants: 45,
     maxParticipants: 100,
-    category: "WEB開発",
+    category: "WEB",
     difficulty: "中級",
     rules: [
       "すべての提出は指定されたWEBフレームワークで実装すること",
@@ -51,7 +51,7 @@ const competitions = [
     deadline: "2025/5/15",
     participants: 28,
     maxParticipants: 50,
-    category: "モバイルアプリ",
+    category: "モバイル",
     difficulty: "上級",
     rules: [
       "オリジナルのデザインであること",
@@ -85,7 +85,7 @@ const competitions = [
     deadline: "2025/4/20",
     participants: 67,
     maxParticipants: 150,
-    category: "WEB開発",
+    category: "WEB",
     difficulty: "上級",
     rules: [
       "指定されたWEBフレームワークで実装すること",
@@ -119,7 +119,7 @@ const competitions = [
     deadline: "2025/5/1",
     participants: 32,
     maxParticipants: 80,
-    category: "WEB開発",
+    category: "WEB",
     difficulty: "中級",
     rules: [
       "オリジナルのコードで脆弱性を検出すること",
@@ -153,7 +153,7 @@ const competitions = [
     deadline: "2025/5/10",
     participants: 35,
     maxParticipants: 70,
-    category: "WEB開発",
+    category: "WEB",
     difficulty: "中級",
     rules: [
       "オリジナルのコードで開発すること",
@@ -187,7 +187,7 @@ const competitions = [
     deadline: "2025/5/20",
     participants: 40,
     maxParticipants: 80,
-    category: "モバイルアプリ",
+    category: "モバイル",
     difficulty: "上級",
     rules: [
       "オリジナルのアプリであること",
